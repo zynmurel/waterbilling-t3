@@ -20,6 +20,16 @@ model User {
     updatedAt DateTime @updatedAt
 }
 
+model Consumer {
+    userId    String   @id @default(cuid())
+    firstName String   @db.VarChar(255)
+    lastName  String   @db.VarChar(255)
+    gender    String
+    birthday  DateTime
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
 enum Role {
     CONSUMER
     CASHIER

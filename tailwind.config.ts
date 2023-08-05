@@ -5,5 +5,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [], 
+   corePlugins: {
+    // Remove Tailwind CSS's preflight style so it can use the antd's preflight instead (reset.css).
+        preflight: false
+      },
 } satisfies Config;
